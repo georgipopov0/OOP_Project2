@@ -11,7 +11,7 @@ protected:
   
 public:
     Image(const char* filename);
-    void save(const char*);
+    virtual void save(const char*);
     virtual ~Image();
     virtual void grayscale() = 0;
     virtual void monochrome() = 0;

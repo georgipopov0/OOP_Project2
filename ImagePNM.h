@@ -1,14 +1,16 @@
 #pragma once
 #include "Image.h"
+#include <fstream>
 
 class ImagePNM: public Image
 {
 protected:
     char type[2];
-    int with;
-    int hight;
+    int width;
+    int height;
     int maxPixelValue;
     int firstPixelIndex;
 public:
     ImagePNM(const char*);
-};
+    };
+

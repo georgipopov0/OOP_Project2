@@ -14,14 +14,14 @@ ImagePNM::ImagePNM(const char* filename):Image(filename){
     firstPixelIndex = 5;
 
     dimentions = strtok(tmp+3, "\x0A");
-    char* with = strtok(dimentions, " ");
-    this->with = std::atoi(with);
-    firstPixelIndex += strlen(with);
+    char* width = strtok(dimentions, " ");
+    this->width = std::atoi(width);
+    firstPixelIndex += strlen(width);
 
-    char* hight = strtok(NULL, " ");
-    this->hight = std::atoi(hight);
+    char* height = strtok(NULL, " ");
+    this->height = std::atoi(height);
 
-    firstPixelIndex += strlen(hight);
+    firstPixelIndex += strlen(height);
 
     if(!strcmp(type,"P5") || !strcmp(type,"P6")){
         char* maxPixelValue = strtok(tmp+firstPixelIndex, "\x0A");
