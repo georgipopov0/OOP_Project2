@@ -7,9 +7,7 @@ Image::Image(const char* filename){
     file.open(filename, std::ios::binary);
 
     file.seekg(0, std::ios::end);
-    std::cout << file.tellg();
     dataSize = file.tellg();
-    std::cout << dataSize;
     file.seekg(0, std::ios::beg);
 
     this->data = new char[dataSize];
