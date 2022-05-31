@@ -14,6 +14,6 @@ public:
     void negative() override;
     void rotate(int direction) override;
     bool** getPixels();
-    void deletePixels(bool*);
+    void deletePixels(bool**&, int);
 };
 

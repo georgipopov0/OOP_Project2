@@ -42,6 +42,14 @@ bool** ImagePBM::getPixels(){
     return pixels;
 }
 
+void ImagePBM::deletePixels(bool**& pixels, int size){
+    for (int i = 0; i < size; i++)
+    {
+        delete[] pixels[i];
+    }
+    delete[] pixels;
+}
+
 
 void ImagePBM::rotate(int direction){
     char* pixels = data + firstPixelIndex;
@@ -105,4 +113,6 @@ void ImagePBM::rotate(int direction){
 
     memcpy(pixels, tempBuffer, sizeBuffer);
     delete[] tempBuffer;
+    deletePixels(test, width);
+    deletePixels(tmp, height);
 }
