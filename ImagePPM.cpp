@@ -3,8 +3,9 @@
 #include <fstream>
 #include <cstring>
 
-ImagePPM::ImagePPM(const char* filename):ImagePNM(filename){
-}
+ImagePPM::ImagePPM(const char* filename):ImagePNM(filename){}
+
+ImagePPM::ImagePPM(const ImagePPM& image):ImagePNM(image){}
 
 void ImagePPM::save(const char* filename){
     std::fstream out;
@@ -12,6 +13,10 @@ void ImagePPM::save(const char* filename){
     out << type << '\x0A' << width << '\x20' << height << '\x0A' << maxPixelValue << '\x0A';
     out.write(data+firstPixelIndex, dataSize - firstPixelIndex);
     out.close();
+}
+
+Image* ImagePPM::createCopy(){
+    return new ImagePPM(*this);
 }
 
 void ImagePPM::grayscale(){

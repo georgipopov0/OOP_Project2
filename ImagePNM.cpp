@@ -33,3 +33,17 @@ ImagePNM::ImagePNM(const char* filename):Image(filename){
 
     delete[] tmp;
 }
+
+ImagePNM::ImagePNM(const ImagePNM& image):Image(image),width(image.width),height(image.height),maxPixelValue(image.maxPixelValue),firstPixelIndex(firstPixelIndex){
+    strcpy(type, image.type);
+}
+
+ImagePNM& ImagePNM::operator=(const ImagePNM&image){
+    Image::operator=(image);
+    strcpy(type, image.type);
+    width = image.width;
+    height = image.height;
+    maxPixelValue = image.maxPixelValue;
+    firstPixelIndex = firstPixelIndex;
+    return *this;
+}

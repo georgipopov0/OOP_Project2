@@ -12,5 +12,8 @@ protected:
     int firstPixelIndex;
 public:
     ImagePNM(const char*);
+    ImagePNM(const ImagePNM&);
+
+    ImagePNM& operator=(const ImagePNM&);
     };
 

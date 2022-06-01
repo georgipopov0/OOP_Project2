@@ -3,6 +3,9 @@
 #include <cstring>
 
 ImagePBM::ImagePBM(const char* filename):ImagePNM(filename){}
+
+ImagePBM::ImagePBM(const ImagePBM& image):ImagePNM(image){}
+
 void ImagePBM::save(const char* filename){
     std::fstream out;
     out.open(filename, std::ios::trunc|std::ios::out);
@@ -10,6 +13,11 @@ void ImagePBM::save(const char* filename){
     out.write(data+firstPixelIndex, dataSize - firstPixelIndex);
     out.close();
 }
+
+Image* ImagePBM::createCopy(){
+    return new ImagePBM(*this);
+}
+
 
 void ImagePBM::negative(){
     for (int i = firstPixelIndex; i < dataSize; i++){

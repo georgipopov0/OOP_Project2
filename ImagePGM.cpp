@@ -4,12 +4,18 @@
 
 ImagePGM::ImagePGM(const char* filename):ImagePNM(filename){}
 
+ImagePGM::ImagePGM(const ImagePGM& image):ImagePNM(image){}
+
 void ImagePGM::save(const char* filename){
     std::fstream out;
     out.open(filename, std::ios::trunc|std::ios::out);
     out << type << '\x0A' << width << '\x20' << height << '\x0A' << maxPixelValue << '\x0A';
     out.write(data+firstPixelIndex, dataSize - firstPixelIndex);
     out.close();
+}
+
+Image* ImagePGM::createCopy(){
+    return new ImagePGM(*this);
 }
 
 void ImagePGM::monochrome(){

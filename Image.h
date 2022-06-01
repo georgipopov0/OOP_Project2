@@ -11,8 +11,15 @@ protected:
   
 public:
     Image(const char* filename);
-    virtual void save(const char*);
+    Image(const Image& image);
     virtual ~Image();
+
+    myString getName()const;
+    Image& operator =(const Image&); 
+
+    virtual void save(const char*);
+    virtual Image* createCopy() = 0;
+
     virtual void grayscale() = 0;
     virtual void monochrome() = 0;
     virtual void negative() = 0;

@@ -7,8 +7,12 @@ private:
     /* data */
 public:
     ImagePGM(const char* filename);
+    ImagePGM(const ImagePGM&);
     ~ImagePGM(){}
+
     void save(const char* filename) override;
+    Image* createCopy() override;
+
     void grayscale() override{}
     void monochrome() override;
     void negative() override;
