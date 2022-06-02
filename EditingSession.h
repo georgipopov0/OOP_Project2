@@ -16,6 +16,7 @@ public:
     EditingSession(Vector<myString>);
     ~EditingSession();
     
+    EditingSession& operator =(const EditingSession&);
 
     void close(myString);
     void save(myString);
@@ -26,8 +27,9 @@ public:
     void grayscale();
     void monochrome();
     void negative();
+    void rotate(int direction);
 
-    void undo(){};
+    void undo();
     void add(myString);
     void sessionInfo();
 };

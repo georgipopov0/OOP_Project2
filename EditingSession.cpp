@@ -55,6 +55,23 @@ EditingSession::~EditingSession(){
     exit();
 }
 
+EditingSession& EditingSession::operator =(const EditingSession& session){
+    
+    exit();
+
+    for (int i = 0; i < session.images.size(); i++)
+    {
+        images.push(session.images.get(i)->createCopy(),i);
+    }
+
+    for (int i = 0; i < session.backups.size(); i++)
+    {
+        backups.push(session.backups.get(i)->createCopy(),i);
+    }
+    
+}
+
+
 void EditingSession::close(myString filename){
     int i = findImageIndex(filename);
     if(i != -1){
@@ -81,27 +98,6 @@ void EditingSession::saveAs(myString filename, myString newName){
         images.get(i)->save(newName.getChar());
     }
     throw "Image not found";
-}
-
-
-//move that later
-void EditingSession::help(){
-    std::cout << "Comands:\n"
-              << "grayscale         Applay grayscale filter to all images in the session\n"
-              << "monochrome        Applay monochrome filter to all images in the session\n"
-              << "negative          Applay negative filter to all images in the session\n"
-              << "rotate            Rotate all images in the couurent session\n"
-              << "undo              Revert chamges made from the last command\n"
-              << "add <image>       Add image to the session\n"
-              << "session info      Display information about the session\n"
-              << "switch <session>  Swith to another session\n"
-              << "save <image>      Save the specified image or ALL for all images\n"
-              << "load <images>     Create a new session\n"
-              << "close <image>     Close an image (changes are not saved)\n"
-              << "help              Displays this manual\n"
-              << "exit              Closses the current session (changes are not saved)\n"
-              << "collage <direction> <image1> <image2> <outimage> Create collage\n"
-              << "saveas <image> <filename> Save the image with a new filename\n";
 }
 
 void EditingSession::exit(){
@@ -146,6 +142,17 @@ void EditingSession::negative(){
     }
 }
 
+void EditingSession::rotate(int direction){
+    backup();
+    for (int  i = 0; i < images.size(); i++)
+    {
+        if(!images.get(i)){
+            continue;
+        }
+        images.get(i)->rotate(direction);
+    }
+}
+
 void EditingSession::undo(){
     for (int i = 0; i < backups.size(); i++)
     {
@@ -181,5 +188,5 @@ void EditingSession::sessionInfo(){
         std::cout << images.get(i)->getName().getChar();
     }
     std::cout << "\n";
-    // implemetn chanes vector....
+    // implemetn changes vector....
 }

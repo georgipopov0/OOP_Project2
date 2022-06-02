@@ -106,6 +106,15 @@ T Vector<T>::pop(){
     return this->elements[elemCount];
 }
 
+template<typename T>
+T Vector<T>::pop(int index){
+    for (int i = index; i < vector.elemCount-1; i++)
+    {
+        elements[i] = elements[i+1];
+    }
+    elemCount--;
+}
+
 /**
  * @brief Returns refference to element specified by position.
  * 
