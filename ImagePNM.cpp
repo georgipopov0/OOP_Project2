@@ -38,6 +38,10 @@ ImagePNM::ImagePNM(const ImagePNM& image):Image(image),width(image.width),height
     strcpy(type, image.type);
 }
 
+bool ImagePNM::CompareType(Image* image1, Image* image2){
+    return ((ImagePNM*)image1)->type[0] == ((ImagePNM*)image2)->type[0] && ((ImagePNM*)image1)->type[1] == ((ImagePNM*)image2)->type[1];
+}
+
 ImagePNM& ImagePNM::operator=(const ImagePNM&image){
     Image::operator=(image);
     strcpy(type, image.type);

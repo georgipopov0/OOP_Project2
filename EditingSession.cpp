@@ -42,6 +42,7 @@ EditingSession::EditingSession(Vector<myString> files){
         else if(!strcmp(files.get(i).getChar()+files.get(i).lenght() - 3,"pbm")){
         images.push(new ImagePBM(files.get(i).getChar()));
         }
+        std::cout << "Image " << files.get(i).getChar() << " added\n";
     }
 
     for (int i = 0; i < images.size(); i++)
@@ -68,7 +69,7 @@ EditingSession& EditingSession::operator =(const EditingSession& session){
     {
         backups.push(session.backups.get(i)->createCopy(),i);
     }
-    
+    return *this;
 }
 
 
@@ -79,6 +80,7 @@ void EditingSession::close(myString filename){
         delete backups.get(i);
         images.push(nullptr,i);
         backups.push(nullptr, i);
+        std::cout << "Image \"" << images.get(i)->getName().getChar() << "\" closed\n";
         return;
     }
     throw "Image not found";
@@ -88,6 +90,7 @@ void EditingSession::save(myString filename){
     int i = findImageIndex(filename);
     if(i != -1){
         images.get(i)->save(images.get(i)->getName().getChar());
+        std::cout << "Image \"" << images.get(i)->getName().getChar() << "\" saved\n";
     }
     throw "Image not found";
 }
@@ -96,6 +99,7 @@ void EditingSession::saveAs(myString filename, myString newName){
     int i = findImageIndex(filename);
     if(i != -1){
         images.get(i)->save(newName.getChar());
+        std::cout << "Image \"" << images.get(i)->getName().getChar() << "\" saved as " << newName.getChar() << std::endl;
     }
     throw "Image not found";
 }
@@ -105,7 +109,7 @@ void EditingSession::exit(){
     {
         delete images.get(i);
         delete backups.get(i);
-    }
+    }   
 }
 
 void EditingSession::grayscale(){
@@ -117,6 +121,7 @@ void EditingSession::grayscale(){
         }
         images.get(i)->grayscale();
     }
+    pendingTransformations.push("grayscale");
 }
 
 void EditingSession::monochrome(){
@@ -128,6 +133,7 @@ void EditingSession::monochrome(){
         }
         images.get(i)->monochrome();
     }
+    pendingTransformations.push("monochrome");
 }
 
 
@@ -140,6 +146,7 @@ void EditingSession::negative(){
         }
         images.get(i)->negative();
     }
+    pendingTransformations.push("negative");
 }
 
 void EditingSession::rotate(int direction){
@@ -151,6 +158,7 @@ void EditingSession::rotate(int direction){
         }
         images.get(i)->rotate(direction);
     }
+    pendingTransformations.push("rotate");
 }
 
 void EditingSession::undo(){
@@ -162,6 +170,7 @@ void EditingSession::undo(){
         delete images.get(i);
         images.get(i) = backups.get(i)->createCopy();
     }
+    pendingTransformations.pop();
 }
 
 void EditingSession::add(myString filename){
@@ -175,6 +184,7 @@ void EditingSession::add(myString filename){
         images.push(new ImagePBM(filename.getChar()));
     }
     backups.push(images.get(images.size()-1)->createCopy());
+    std::cout << "Image " << filename.getChar() << " added\n";
 }
 
 
@@ -187,6 +197,13 @@ void EditingSession::sessionInfo(){
         }
         std::cout << images.get(i)->getName().getChar();
     }
-    std::cout << "\n";
-    // implemetn changes vector....
+
+    std::cout << std::endl;
+
+    for (int i = 0; i < pendingTransformations.size(); i++)
+    {
+        std::cout << pendingTransformations.get(i).getChar() << " ,";
+    }
+    
+    std::cout << std::endl;
 }

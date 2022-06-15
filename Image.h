@@ -10,6 +10,13 @@ protected:
     int dataSize;
   
 public:
+    enum Direction
+    {
+        horizontal,
+        vertical
+    };
+    
+
     Image(const char* filename);
     Image(const Image& image);
     virtual ~Image();
@@ -24,4 +31,5 @@ public:
     virtual void monochrome() = 0;
     virtual void negative() = 0;
     virtual void rotate(int) = 0;
+    // virtual Image* colage(Direction direction, Image*, Image*) = 0;
 };

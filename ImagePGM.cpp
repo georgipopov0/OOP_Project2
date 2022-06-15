@@ -15,7 +15,7 @@ void ImagePGM::save(const char* filename){
 }
 
 Image* ImagePGM::createCopy(){
-    return new ImagePGM(*this);
+    return (Image*)(new ImagePGM(*this));
 }
 
 void ImagePGM::monochrome(){

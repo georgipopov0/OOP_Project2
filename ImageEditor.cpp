@@ -8,26 +8,28 @@ void ImageEditor::load(myString image){
     Vector<myString> files;
     char tmpBuffer[image.lenght()+1];
     memcpy(tmpBuffer,image.getChar(), image.lenght() + 1);
-    char* tok = strtok(tmpBuffer, " ");
+    char* tok = strtok(tmpBuffer, " ");    
     while (!tok)
     {
         files.push(tok);
     }
     sessions.push(EditingSession(files));
     currentSessionId = sessions.size() - 1;
-    std::cout << "Session with ID: 1 started\n";
 }
 
 void ImageEditor::close(myString image){
     sessions.get(currentSessionId).close(image);
+    std::cout << "Image " << image.getChar() << " closed\n";
 }
 
 void ImageEditor::save(myString image){
     sessions.get(currentSessionId).save(image);
+    std::cout << "Image " << image.getChar() << " saved\n";
 }
 
 void ImageEditor::saveAs(myString image, myString filename){
     sessions.get(currentSessionId).saveAs(image, filename);
+        std::cout << "Image " << image.getChar() << " saved as " << filename.getChar() <<"\n";
 }
 
 void ImageEditor::help(){
@@ -52,7 +54,7 @@ void ImageEditor::help(){
 void ImageEditor::exit(){
     sessions.pop(currentSessionId);
     std::cout << "Session with ID: " << currentSessionId << " closed\n";
-    currentSessionId = sessions.size();
+    currentSessionId = sessions.size() - 1;
     std::cout << "Current session: " << currentSessionId << std::endl;
 }
 
@@ -76,8 +78,8 @@ void ImageEditor::undo(){
     sessions.get(currentSessionId).undo();
 }
 
-void ImageEditor::add(myString filename){
-    sessions.get(currentSessionId).add(filename);
+void ImageEditor::add(myString image){
+    sessions.get(currentSessionId).add(image);
 }
 
 void ImageEditor::sessionInfo(){

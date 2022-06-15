@@ -108,11 +108,12 @@ T Vector<T>::pop(){
 
 template<typename T>
 T Vector<T>::pop(int index){
-    for (int i = index; i < vector.elemCount-1; i++)
+    for (int i = index; i < elemCount-1; i++)
     {
         elements[i] = elements[i+1];
     }
     elemCount--;
+    return elements[elemCount--];
 }
 
 /**

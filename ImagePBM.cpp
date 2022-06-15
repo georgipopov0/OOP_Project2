@@ -124,3 +124,5 @@ void ImagePBM::rotate(int direction){
     deletePixels(test, width);
     deletePixels(tmp, height);
 }
+
+

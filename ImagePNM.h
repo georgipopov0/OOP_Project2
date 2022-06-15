@@ -13,6 +13,7 @@ protected:
 public:
     ImagePNM(const char*);
     ImagePNM(const ImagePNM&);
+    bool CompareType(Image*, Image*);
 
     ImagePNM& operator=(const ImagePNM&);
     };

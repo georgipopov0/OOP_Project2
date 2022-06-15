@@ -8,11 +8,13 @@ class EditingSession
 private:
     Vector<Image*> images;
     Vector<Image*> backups;
+    Vector<myString> pendingTransformations;
 
     int findImageIndex(myString);
     void backup();
 
 public:
+    EditingSession():images(Vector<Image*>()), backups(Vector<Image*>()),pendingTransformations(Vector<myString>()){}
     EditingSession(Vector<myString>);
     ~EditingSession();
     
