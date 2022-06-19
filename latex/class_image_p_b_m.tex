@@ -1,0 +1,114 @@
+\hypertarget{class_image_p_b_m}{}\doxysection{Image\+PBM Class Reference}
+\label{class_image_p_b_m}\index{ImagePBM@{ImagePBM}}
+Inheritance diagram for Image\+PBM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_image_p_b_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_p_b_m_a5edbfe4c4a818f9e82dc3c12475d5e37}\label{class_image_p_b_m_a5edbfe4c4a818f9e82dc3c12475d5e37}} 
+{\bfseries Image\+PBM} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{class_image_p_b_m_a325eff7eba8678acd44cb1e16c6725f2}\label{class_image_p_b_m_a325eff7eba8678acd44cb1e16c6725f2}} 
+{\bfseries Image\+PBM} (const \mbox{\hyperlink{class_image_p_b_m}{Image\+PBM}} \&)
+\item 
+void \mbox{\hyperlink{class_image_p_b_m_a76fb12e1caa6123fb8b39215444c1de9}{save}} (const char $\ast$filename) override
+\begin{DoxyCompactList}\small\item\em save the iamge \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image}{Image}} $\ast$ \mbox{\hyperlink{class_image_p_b_m_af9119d0e5e31d9b9a8ff847600991684}{create\+Copy}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_b_m_a292f5f4fadf518ae92ffd0975d003a3f}{grayscale}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_b_m_a9057fe27039d6b1c273e088767b5c168}{monochrome}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_b_m_a964b2686ad93294c18eb6b66fbfd0f82}{negative}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_b_m_a96703dfdb8b2094846e246245afa1e42}{rotate}} (int direction) override
+\item 
+\mbox{\Hypertarget{class_image_p_b_m_a5fb2686e7f7212cb01f6e8948677e119}\label{class_image_p_b_m_a5fb2686e7f7212cb01f6e8948677e119}} 
+bool $\ast$$\ast$ {\bfseries get\+Pixels} ()
+\item 
+\mbox{\Hypertarget{class_image_p_b_m_a5f1e86ebe8d7253d622d22696f612344}\label{class_image_p_b_m_a5f1e86ebe8d7253d622d22696f612344}} 
+void {\bfseries delete\+Pixels} (bool $\ast$$\ast$\&, int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_p_b_m_af9119d0e5e31d9b9a8ff847600991684}\label{class_image_p_b_m_af9119d0e5e31d9b9a8ff847600991684}} 
+\index{ImagePBM@{ImagePBM}!createCopy@{createCopy}}
+\index{createCopy@{createCopy}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{createCopy()}{createCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_image}{Image}} $\ast$ Image\+PBM\+::create\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_b_m_a292f5f4fadf518ae92ffd0975d003a3f}\label{class_image_p_b_m_a292f5f4fadf518ae92ffd0975d003a3f}} 
+\index{ImagePBM@{ImagePBM}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void Image\+PBM\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_b_m_a9057fe27039d6b1c273e088767b5c168}\label{class_image_p_b_m_a9057fe27039d6b1c273e088767b5c168}} 
+\index{ImagePBM@{ImagePBM}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void Image\+PBM\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_b_m_a964b2686ad93294c18eb6b66fbfd0f82}\label{class_image_p_b_m_a964b2686ad93294c18eb6b66fbfd0f82}} 
+\index{ImagePBM@{ImagePBM}!negative@{negative}}
+\index{negative@{negative}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void Image\+PBM\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_b_m_a96703dfdb8b2094846e246245afa1e42}\label{class_image_p_b_m_a96703dfdb8b2094846e246245afa1e42}} 
+\index{ImagePBM@{ImagePBM}!rotate@{rotate}}
+\index{rotate@{rotate}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Image\+PBM\+::rotate (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_b_m_a76fb12e1caa6123fb8b39215444c1de9}\label{class_image_p_b_m_a76fb12e1caa6123fb8b39215444c1de9}} 
+\index{ImagePBM@{ImagePBM}!save@{save}}
+\index{save@{save}!ImagePBM@{ImagePBM}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Image\+PBM\+::save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+save the iamge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_image_a530adb4cea35209a6e8180815faf8ec8}{Image}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Image\+PBM.\+h\item 
+Image\+PBM.\+cpp\end{DoxyCompactItemize}

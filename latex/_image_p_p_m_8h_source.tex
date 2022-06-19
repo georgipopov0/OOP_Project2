@@ -1,0 +1,24 @@
+\hypertarget{_image_p_p_m_8h_source}{}\doxysection{Image\+PPM.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}ImagePNM.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_image_p_p_m}{ImagePPM}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \mbox{\hyperlink{class_image_p_p_m_a49153048476d843811faba043300d1b9}{ImagePPM}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_image_p_p_m_a49153048476d843811faba043300d1b9}{ImagePPM}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_image_p_p_m}{ImagePPM}}\&);}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_p_p_m_ab4f41e54a48cd3d9f464c09a1259ca30}{save}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* fileName) \textcolor{keyword}{override};}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_image}{Image}}* \mbox{\hyperlink{class_image_p_p_m_ad4993d7ceadfb85fc020e0f80c7bbeac}{createCopy}}()\textcolor{keyword}{override};}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} grayscale() \textcolor{keyword}{override};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} monochrome() \textcolor{keyword}{override};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} negative() \textcolor{keyword}{override};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_p_p_m_a0efa80eac78d8015d3ff2b14c54ea20f}{rotate}}(\textcolor{keywordtype}{int}) \textcolor{keyword}{override};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_p_p_m_aac38c44be920f299ee19bb5adca7d03d}{makePictureLookCool}}();}
+\DoxyCodeLine{19 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,146 @@
+\hypertarget{class_image_p_p_m}{}\doxysection{Image\+PPM Class Reference}
+\label{class_image_p_p_m}\index{ImagePPM@{ImagePPM}}
+Inheritance diagram for Image\+PPM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_image_p_p_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_p_p_m_a49153048476d843811faba043300d1b9}{Image\+PPM}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_image}{Image}} P P M\+:\+: \mbox{\hyperlink{class_image}{Image}} P P M object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_p_p_m_a2116edae577985c55af710d3345a9994}{Image\+PPM}} (const \mbox{\hyperlink{class_image_p_p_m}{Image\+PPM}} \&)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_image}{Image}} P P M\+:\+: \mbox{\hyperlink{class_image}{Image}} P P M object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_p_p_m_ab4f41e54a48cd3d9f464c09a1259ca30}{save}} (const char $\ast$file\+Name) override
+\item 
+\mbox{\hyperlink{class_image}{Image}} $\ast$ \mbox{\hyperlink{class_image_p_p_m_ad4993d7ceadfb85fc020e0f80c7bbeac}{create\+Copy}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_p_m_aebf2cd4c488b9b3e8627e1fb877a9e12}{grayscale}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_p_m_a5caa9a2482ab34348da52cf593906868}{monochrome}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_p_m_a02d3760af67bcb666c9ed0f3a6ef8fae}{negative}} () override
+\item 
+void \mbox{\hyperlink{class_image_p_p_m_a0efa80eac78d8015d3ff2b14c54ea20f}{rotate}} (int) override
+\item 
+\mbox{\Hypertarget{class_image_p_p_m_aac38c44be920f299ee19bb5adca7d03d}\label{class_image_p_p_m_aac38c44be920f299ee19bb5adca7d03d}} 
+void {\bfseries make\+Picture\+Look\+Cool} ()
+\begin{DoxyCompactList}\small\item\em brainlagged while writing the negative but this makes pictures look cool \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_p_p_m_a49153048476d843811faba043300d1b9}\label{class_image_p_p_m_a49153048476d843811faba043300d1b9}} 
+\index{ImagePPM@{ImagePPM}!ImagePPM@{ImagePPM}}
+\index{ImagePPM@{ImagePPM}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{ImagePPM()}{ImagePPM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Image\+PPM\+::\+Image\+PPM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_image}{Image}} P P M\+:\+: \mbox{\hyperlink{class_image}{Image}} P P M object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_p_p_m_a2116edae577985c55af710d3345a9994}\label{class_image_p_p_m_a2116edae577985c55af710d3345a9994}} 
+\index{ImagePPM@{ImagePPM}!ImagePPM@{ImagePPM}}
+\index{ImagePPM@{ImagePPM}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{ImagePPM()}{ImagePPM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Image\+PPM\+::\+Image\+PPM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image_p_p_m}{Image\+PPM}} \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_image}{Image}} P P M\+:\+: \mbox{\hyperlink{class_image}{Image}} P P M object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_p_p_m_ad4993d7ceadfb85fc020e0f80c7bbeac}\label{class_image_p_p_m_ad4993d7ceadfb85fc020e0f80c7bbeac}} 
+\index{ImagePPM@{ImagePPM}!createCopy@{createCopy}}
+\index{createCopy@{createCopy}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{createCopy()}{createCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_image}{Image}} $\ast$ Image\+PPM\+::create\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+Image$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_p_m_aebf2cd4c488b9b3e8627e1fb877a9e12}\label{class_image_p_p_m_aebf2cd4c488b9b3e8627e1fb877a9e12}} 
+\index{ImagePPM@{ImagePPM}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void Image\+PPM\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_p_m_a5caa9a2482ab34348da52cf593906868}\label{class_image_p_p_m_a5caa9a2482ab34348da52cf593906868}} 
+\index{ImagePPM@{ImagePPM}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void Image\+PPM\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_p_m_a02d3760af67bcb666c9ed0f3a6ef8fae}\label{class_image_p_p_m_a02d3760af67bcb666c9ed0f3a6ef8fae}} 
+\index{ImagePPM@{ImagePPM}!negative@{negative}}
+\index{negative@{negative}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void Image\+PPM\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_p_m_a0efa80eac78d8015d3ff2b14c54ea20f}\label{class_image_p_p_m_a0efa80eac78d8015d3ff2b14c54ea20f}} 
+\index{ImagePPM@{ImagePPM}!rotate@{rotate}}
+\index{rotate@{rotate}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Image\+PPM\+::rotate (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_image}{Image}}.
+
+\mbox{\Hypertarget{class_image_p_p_m_ab4f41e54a48cd3d9f464c09a1259ca30}\label{class_image_p_p_m_ab4f41e54a48cd3d9f464c09a1259ca30}} 
+\index{ImagePPM@{ImagePPM}!save@{save}}
+\index{save@{save}!ImagePPM@{ImagePPM}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Image\+PPM\+::save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_image_a530adb4cea35209a6e8180815faf8ec8}{Image}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Image\+PPM.\+h\item 
+Image\+PPM.\+cpp\end{DoxyCompactItemize}

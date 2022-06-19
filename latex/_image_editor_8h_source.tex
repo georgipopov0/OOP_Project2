@@ -1,0 +1,34 @@
+\hypertarget{_image_editor_8h_source}{}\doxysection{Image\+Editor.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}EditingSession.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_image_editor}{ImageEditor}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_vector}{Vector<EditingSession>}} sessions;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} currentSessionId;}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_image_editor_a66e021d837c2f15e026e045dc3fbdcc5}{ImageEditor}}(\textcolor{comment}{/* args */});}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_ad316dae545ff275e13bbd7866bcfe2bd}{load}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a7cfd7c7f3f34f195f494c4aeda5a4562}{close}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a3221709d5d69f0bd9c387dba60412060}{save}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a57dbc0abd360f44308ed05892d251ede}{saveAs}}(\mbox{\hyperlink{classmy_string}{myString}}, \mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a0190f97e54d22fa13ecd9d4ff5dbec02}{help}}();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a1a6868eb51fbfaec4676589134585709}{exit}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_ab55948e50deba1f9473a9d5d13d19c6b}{grayscale}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_aaf213139cf518d8fb54930c1d673af34}{monochrome}}();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_abcfd6962a5b78cf6fab795abc402f446}{negative}}();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_abf9354f9a566372bfa6c36fac7383162}{rotate}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_abf4ef69a1837ccc4803633724f740ef1}{undo}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a8ef65d07c54d560e9018f38c3891ad4e}{add}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_a28759c75002a0c9e345ec65a89870bd2}{sessionInfo}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_editor_aca15b7b9089f438d8ac4c44f6021a19b}{switchSession}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+
+\end{DoxyCode}

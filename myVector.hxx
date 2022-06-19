@@ -91,6 +91,7 @@ void Vector<T>::push(T element, int index){
     }
     else{
         elements[index] = element;
+        if(elemCount == 0){elemCount++;}
     }
 } 
 

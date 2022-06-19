@@ -1,0 +1,25 @@
+\hypertarget{_image_p_n_m_8h_source}{}\doxysection{Image\+PNM.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Image.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_image}{Image}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{8     \textcolor{keywordtype}{char} type[2];}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int} width;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} height;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} maxPixelValue;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} firstPixelIndex;}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_image_p_n_m_ad179c8e807b04882485649e6c8654bcd}{ImagePNM}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_image_p_n_m_ad179c8e807b04882485649e6c8654bcd}{ImagePNM}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}\&);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_image_p_n_m_ab13dc8c985c9c3972d2580e1ffa7c6ac}{CompareType}}(\mbox{\hyperlink{class_image}{Image}}*, \mbox{\hyperlink{class_image}{Image}}*);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}\&);}
+\DoxyCodeLine{19     \};}
+\DoxyCodeLine{20 }
+
+\end{DoxyCode}

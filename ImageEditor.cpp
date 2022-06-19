@@ -2,36 +2,66 @@
 #include <cstring>
 #include <iostream>
 
+/**
+ * @brief Construct a new Image Editor:: Image Editor object
+ * 
+ */
 ImageEditor::ImageEditor():sessions(Vector<EditingSession>()){}
 
+/**
+ * @brief Create a new session
+ * 
+ * @param image images to load in the session
+ */
 void ImageEditor::load(myString image){
     Vector<myString> files;
     char tmpBuffer[image.lenght()+1];
     memcpy(tmpBuffer,image.getChar(), image.lenght() + 1);
     char* tok = strtok(tmpBuffer, " ");    
-    while (!tok)
+    while (tok)
     {
         files.push(tok);
+        tok = strtok(NULL, " ");
     }
     sessions.push(EditingSession(files));
     currentSessionId = sessions.size() - 1;
 }
 
+/**
+ * @brief close an image
+ * 
+ * @param image 
+ */
 void ImageEditor::close(myString image){
     sessions.get(currentSessionId).close(image);
     std::cout << "Image " << image.getChar() << " closed\n";
 }
 
+/**
+ * @brief save an image in the current session
+ * 
+ * @param image 
+ */
 void ImageEditor::save(myString image){
     sessions.get(currentSessionId).save(image);
     std::cout << "Image " << image.getChar() << " saved\n";
 }
 
+/**
+ * @brief save image with new name
+ * 
+ * @param image 
+ * @param filename 
+ */
 void ImageEditor::saveAs(myString image, myString filename){
     sessions.get(currentSessionId).saveAs(image, filename);
         std::cout << "Image " << image.getChar() << " saved as " << filename.getChar() <<"\n";
 }
 
+/**
+ * @brief display  a help manual
+ * 
+ */
 void ImageEditor::help(){
     std::cout << "Comands:\n"
             << "grayscale         Applay grayscale filter to all images in the session\n"
@@ -51,6 +81,10 @@ void ImageEditor::help(){
             << "saveas <image> <filename> Save the image with a new filename\n";
 }
 
+/**
+ * @brief close the current session
+ * 
+ */
 void ImageEditor::exit(){
     sessions.pop(currentSessionId);
     std::cout << "Session with ID: " << currentSessionId << " closed\n";
@@ -58,34 +92,69 @@ void ImageEditor::exit(){
     std::cout << "Current session: " << currentSessionId << std::endl;
 }
 
+/**
+ * @brief graysale all images in the current session
+ * 
+ */
 void ImageEditor::grayscale(){
     sessions.get(currentSessionId).grayscale();
 }
 
+/**
+ * @brief monochrome all images in the session
+ * 
+ */
 void ImageEditor::monochrome(){
     sessions.get(currentSessionId).monochrome();   
 }
 
+/**
+ * @brief negative all images in the session
+ * 
+ */
 void ImageEditor::negative(){
     sessions.get(currentSessionId).negative();
 }
 
+/**
+ * @brief rotate all images in the sesiion
+ * 
+ * @param direction negative->counteclockwise positive->clockwise
+ */
 void ImageEditor::rotate(int direction){
     sessions.get(currentSessionId).rotate(direction);
 }
 
+/**
+ * @brief undo last transformation in the session
+ * 
+ */
 void ImageEditor::undo(){
     sessions.get(currentSessionId).undo();
 }
 
+/**
+ * @brief add image to the session
+ * 
+ * @param image 
+ */
 void ImageEditor::add(myString image){
     sessions.get(currentSessionId).add(image);
 }
 
+/**
+ * @brief display session info
+ * 
+ */
 void ImageEditor::sessionInfo(){
     sessions.get(currentSessionId).sessionInfo();
 }
 
+/**
+ * @brief switch to another session
+ * 
+ * @param sessionId 
+ */
 void ImageEditor::switchSession(int sessionId){
     currentSessionId = sessionId;
 }

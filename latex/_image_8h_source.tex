@@ -1,0 +1,40 @@
+\hypertarget{_image_8h_source}{}\doxysection{Image.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}myString.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_image}{Image}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{classmy_string}{myString}} filename;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{char} *data;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} dataSize;}
+\DoxyCodeLine{15   }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \textcolor{keyword}{enum} Direction}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         horizontal,}
+\DoxyCodeLine{20         vertical}
+\DoxyCodeLine{21     \};}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{class_image_a9700f58efb58b13e23666f19c67d3839}{Image}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_image_a9700f58efb58b13e23666f19c67d3839}{Image}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_image}{Image}}\& image);}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{\string~Image}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{classmy_string}{myString}} \mbox{\hyperlink{class_image_a618183734579eecbb660febff4a9a8b9}{getName}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_image}{Image}}\& \mbox{\hyperlink{class_image_adba4d519e12c4956fb857d0c44d45f8c}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_image}{Image}}\&); }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a530adb4cea35209a6e8180815faf8ec8}{save}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{32     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_image}{Image}}* createCopy() = 0;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} grayscale() = 0;}
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} monochrome() = 0;}
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} negative() = 0;}
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} rotate(\textcolor{keywordtype}{int}) = 0;}
+\DoxyCodeLine{38     \textcolor{comment}{// virtual Image* colage(Direction direction, Image*, Image*) = 0;}}
+\DoxyCodeLine{39 \};}
+
+\end{DoxyCode}

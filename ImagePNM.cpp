@@ -2,6 +2,11 @@
 #include <cstring>
 #include "ImagePNM.h"
 
+/**
+ * @brief Construct a new Image P N M:: Image P N M object
+ * 
+ * @param filename 
+ */
 ImagePNM::ImagePNM(const char* filename):Image(filename){
     
     char* tmp = new char[64];
@@ -34,10 +39,23 @@ ImagePNM::ImagePNM(const char* filename):Image(filename){
     delete[] tmp;
 }
 
+/**
+ * @brief Construct a new Image P N M:: Image P N M object
+ * 
+ * @param image 
+ */
 ImagePNM::ImagePNM(const ImagePNM& image):Image(image),width(image.width),height(image.height),maxPixelValue(image.maxPixelValue),firstPixelIndex(firstPixelIndex){
     strcpy(type, image.type);
 }
 
+/**
+ * @brief 
+ * 
+ * @param image1 
+ * @param image2 
+ * @return true 
+ * @return false 
+ */
 bool ImagePNM::CompareType(Image* image1, Image* image2){
     return ((ImagePNM*)image1)->type[0] == ((ImagePNM*)image2)->type[0] && ((ImagePNM*)image1)->type[1] == ((ImagePNM*)image2)->type[1];
 }

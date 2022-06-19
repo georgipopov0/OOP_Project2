@@ -1,0 +1,42 @@
+\hypertarget{_editing_session_8h_source}{}\doxysection{Editing\+Session.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Image.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}myString.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}myVector.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_editing_session}{EditingSession}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_vector}{Vector<Image*>}} images;}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_vector}{Vector<Image*>}} backups;}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_vector}{Vector<myString>}} pendingTransformations;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} findImageIndex(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} backup();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_editing_session}{EditingSession}}():images(\mbox{\hyperlink{class_vector}{Vector<Image*>}}()), backups(\mbox{\hyperlink{class_vector}{Vector<Image*>}}()),pendingTransformations(\mbox{\hyperlink{class_vector}{Vector<myString>}}())\{\}}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_editing_session}{EditingSession}}(\mbox{\hyperlink{class_vector}{Vector<myString>}});}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_editing_session_aad2eed7c12a2fb8d0f7ccbad3f24b9b4}{\string~EditingSession}}();}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_editing_session}{EditingSession}}\& \mbox{\hyperlink{class_editing_session_a5612a85abff3946ad7c52d9d58e65239}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_editing_session}{EditingSession}}\&);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a6d23e80223e236049c17625183d97782}{close}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a2e474bee582bd58fa94547bf363ed05b}{save}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a864517cb955beba9ddad2dd7c024d57f}{saveAs}}(\mbox{\hyperlink{classmy_string}{myString}}, \mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} help();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a4e6c03eb5326252667526b6c5d232dd9}{exit}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a3daaf93bb1fa637536d59aa4cafeae06}{grayscale}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a022b5eea1ad74fad564174eb8b30281d}{monochrome}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a245543194985df7704f29e0ca16c30c2}{negative}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a9ec7759eeccea0e06c99c89b1be335a4}{rotate}}(\textcolor{keywordtype}{int} direction);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a4287fe71ef13631a3f18392506382a51}{undo}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_abffcf1a1a01572bc67fd972188866399}{add}}(\mbox{\hyperlink{classmy_string}{myString}});}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_editing_session_a8a8dc80c42a5afb4b29490ee5cb6c471}{sessionInfo}}();}
+\DoxyCodeLine{37 \};}
+
+\end{DoxyCode}

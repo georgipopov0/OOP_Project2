@@ -2,18 +2,25 @@
 #include <iostream>
 #include <cstring>
 
-void getCommand(Vector<myString>& argv){
+
+/**
+ * @brief Get and parse command from stdin
+ * 
+ * @param argv [0] is the name of the command and the rest are arguments
+ */
+void Controller::getCommand(Vector<myString>& argv){
     char command[64];
     for (int i = 0;; i++)
     {
         std::cin >> command;
+        argv.push(command, i);
         if (std::cin.peek() == '\n') {
             break;
         }
-        argv.get(i) = command;
     }
 }
 
+// Starts the user interface
 void Controller::init(){
     Vector<myString> command;
     while (true)
@@ -21,8 +28,9 @@ void Controller::init(){
         try
         {
             std::cout << "> ";
-            getCommand(command);
+            Controller::getCommand(command);
             if(!strcmp(command.get(0).getChar(), "load")){
+                // myString test = command.get(1);
                 editor.load(command.get(1));
             }
             else if(!strcmp(command.get(0).getChar(), "close")){
@@ -56,6 +64,7 @@ void Controller::init(){
         }
         catch(const char* message)
         {
+
             std::cerr << message << std::endl;
         }
         

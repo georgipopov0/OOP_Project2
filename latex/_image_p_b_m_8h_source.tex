@@ -1,0 +1,28 @@
+\hypertarget{_image_p_b_m_8h_source}{}\doxysection{Image\+PBM.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}ImagePNM.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_image_p_b_m}{ImagePBM}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_image_p_n_m}{ImagePNM}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     \textcolor{comment}{/* data */}}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_image_p_b_m}{ImagePBM}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} * filename);}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_image_p_b_m}{ImagePBM}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_image_p_b_m}{ImagePBM}}\&);}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_image_p_b_m}{\string~ImagePBM}}()\{\}}
+\DoxyCodeLine{12     }
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_p_b_m_a76fb12e1caa6123fb8b39215444c1de9}{save}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename) \textcolor{keyword}{override};}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_image}{Image}}* createCopy()\textcolor{keyword}{override};}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} grayscale()\textcolor{keyword}{ override}\{\}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} monochrome()\textcolor{keyword}{ override}\{\}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} negative() \textcolor{keyword}{override};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} rotate(\textcolor{keywordtype}{int} direction) \textcolor{keyword}{override};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool}** getPixels();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} deletePixels(\textcolor{keywordtype}{bool}**\&, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+
+\end{DoxyCode}

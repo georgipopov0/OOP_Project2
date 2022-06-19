@@ -3,10 +3,25 @@
 #include <fstream>
 #include <cstring>
 
+/**
+ * @brief Construct a new Image P P M:: Image P P M object
+ * 
+ * @param filename 
+ */
 ImagePPM::ImagePPM(const char* filename):ImagePNM(filename){}
 
+/**
+ * @brief Construct a new Image P P M:: Image P P M object
+ * 
+ * @param image 
+ */
 ImagePPM::ImagePPM(const ImagePPM& image):ImagePNM(image){}
 
+/**
+ * @brief 
+ * 
+ * @param filename 
+ */
 void ImagePPM::save(const char* filename){
     std::fstream out;
     out.open(filename, std::ios::trunc|std::ios::out);
@@ -15,10 +30,19 @@ void ImagePPM::save(const char* filename){
     out.close();
 }
 
+/**
+ * @brief 
+ * 
+ * @return Image* 
+ */
 Image* ImagePPM::createCopy(){
     return new ImagePPM(*this);
 }
 
+/**
+ * @brief 
+ * 
+ */
 void ImagePPM::grayscale(){
     for (int i = firstPixelIndex; i < dataSize; i+=3)
     {
@@ -30,6 +54,10 @@ void ImagePPM::grayscale(){
     }
 }
 
+/**
+ * @brief 
+ * 
+ */
 void ImagePPM::monochrome(){
     for (int i = firstPixelIndex; i < dataSize; i+=3)
     {
@@ -45,6 +73,10 @@ void ImagePPM::monochrome(){
     }
 }
 
+/**
+ * @brief 
+ * 
+ */
 void ImagePPM::negative(){
     for (int i = firstPixelIndex; i < dataSize; i++){
         char pixel = maxPixelValue - ((unsigned char)data[i]);
@@ -52,6 +84,11 @@ void ImagePPM::negative(){
     }
 }
 
+/**
+ * @brief 
+ * 
+ * @param direction 
+ */
 void ImagePPM::rotate(int direction){
     char* pixels = data + firstPixelIndex;
     const unsigned int sizeBuffer = width * height * 3; 
@@ -89,6 +126,10 @@ void ImagePPM::rotate(int direction){
     width = tmp;
 }
 
+/**
+ * @brief brainlagged while writing the negative but this makes pictures look cool
+ * 
+ */
 void ImagePPM::makePictureLookCool(){
     for (int i = firstPixelIndex; i < dataSize; i++){
         char pixel = maxPixelValue - ((unsigned char)data[i]);

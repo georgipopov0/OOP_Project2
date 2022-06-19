@@ -1,0 +1,159 @@
+\hypertarget{class_image_editor}{}\doxysection{Image\+Editor Class Reference}
+\label{class_image_editor}\index{ImageEditor@{ImageEditor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_editor_a66e021d837c2f15e026e045dc3fbdcc5}\label{class_image_editor_a66e021d837c2f15e026e045dc3fbdcc5}} 
+{\bfseries Image\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_image}{Image}} Editor\+:\+: \mbox{\hyperlink{class_image}{Image}} Editor object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_ad316dae545ff275e13bbd7866bcfe2bd}{load}} (\mbox{\hyperlink{classmy_string}{my\+String}})
+\begin{DoxyCompactList}\small\item\em Create a new session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_a7cfd7c7f3f34f195f494c4aeda5a4562}{close}} (\mbox{\hyperlink{classmy_string}{my\+String}})
+\begin{DoxyCompactList}\small\item\em close an image \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_a3221709d5d69f0bd9c387dba60412060}{save}} (\mbox{\hyperlink{classmy_string}{my\+String}})
+\begin{DoxyCompactList}\small\item\em save an image in the current session \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_a57dbc0abd360f44308ed05892d251ede}{save\+As}} (\mbox{\hyperlink{classmy_string}{my\+String}}, \mbox{\hyperlink{classmy_string}{my\+String}})
+\begin{DoxyCompactList}\small\item\em save image with new name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_a0190f97e54d22fa13ecd9d4ff5dbec02}\label{class_image_editor_a0190f97e54d22fa13ecd9d4ff5dbec02}} 
+void {\bfseries help} ()
+\begin{DoxyCompactList}\small\item\em display a help manual \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_a1a6868eb51fbfaec4676589134585709}\label{class_image_editor_a1a6868eb51fbfaec4676589134585709}} 
+void {\bfseries exit} ()
+\begin{DoxyCompactList}\small\item\em close the current session \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_ab55948e50deba1f9473a9d5d13d19c6b}\label{class_image_editor_ab55948e50deba1f9473a9d5d13d19c6b}} 
+void {\bfseries grayscale} ()
+\begin{DoxyCompactList}\small\item\em graysale all images in the current session \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_aaf213139cf518d8fb54930c1d673af34}\label{class_image_editor_aaf213139cf518d8fb54930c1d673af34}} 
+void {\bfseries monochrome} ()
+\begin{DoxyCompactList}\small\item\em monochrome all images in the session \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_abcfd6962a5b78cf6fab795abc402f446}\label{class_image_editor_abcfd6962a5b78cf6fab795abc402f446}} 
+void {\bfseries negative} ()
+\begin{DoxyCompactList}\small\item\em negative all images in the session \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_abf9354f9a566372bfa6c36fac7383162}{rotate}} (int)
+\begin{DoxyCompactList}\small\item\em rotate all images in the sesiion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_abf4ef69a1837ccc4803633724f740ef1}\label{class_image_editor_abf4ef69a1837ccc4803633724f740ef1}} 
+void {\bfseries undo} ()
+\begin{DoxyCompactList}\small\item\em undo last transformation in the session \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_a8ef65d07c54d560e9018f38c3891ad4e}{add}} (\mbox{\hyperlink{classmy_string}{my\+String}})
+\begin{DoxyCompactList}\small\item\em add image to the session \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_editor_a28759c75002a0c9e345ec65a89870bd2}\label{class_image_editor_a28759c75002a0c9e345ec65a89870bd2}} 
+void {\bfseries session\+Info} ()
+\begin{DoxyCompactList}\small\item\em display session info \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_editor_aca15b7b9089f438d8ac4c44f6021a19b}{switch\+Session}} (int)
+\begin{DoxyCompactList}\small\item\em switch to another session \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_editor_a8ef65d07c54d560e9018f38c3891ad4e}\label{class_image_editor_a8ef65d07c54d560e9018f38c3891ad4e}} 
+\index{ImageEditor@{ImageEditor}!add@{add}}
+\index{add@{add}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Image\+Editor\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{image }\end{DoxyParamCaption})}
+
+
+
+add image to the session 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_a7cfd7c7f3f34f195f494c4aeda5a4562}\label{class_image_editor_a7cfd7c7f3f34f195f494c4aeda5a4562}} 
+\index{ImageEditor@{ImageEditor}!close@{close}}
+\index{close@{close}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Image\+Editor\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{image }\end{DoxyParamCaption})}
+
+
+
+close an image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_ad316dae545ff275e13bbd7866bcfe2bd}\label{class_image_editor_ad316dae545ff275e13bbd7866bcfe2bd}} 
+\index{ImageEditor@{ImageEditor}!load@{load}}
+\index{load@{load}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Image\+Editor\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{image }\end{DoxyParamCaption})}
+
+
+
+Create a new session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & images to load in the session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_abf9354f9a566372bfa6c36fac7383162}\label{class_image_editor_abf9354f9a566372bfa6c36fac7383162}} 
+\index{ImageEditor@{ImageEditor}!rotate@{rotate}}
+\index{rotate@{rotate}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Image\+Editor\+::rotate (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+rotate all images in the sesiion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & negative-\/\texorpdfstring{$>$}{>}counteclockwise positive-\/\texorpdfstring{$>$}{>}clockwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_a3221709d5d69f0bd9c387dba60412060}\label{class_image_editor_a3221709d5d69f0bd9c387dba60412060}} 
+\index{ImageEditor@{ImageEditor}!save@{save}}
+\index{save@{save}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Image\+Editor\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{image }\end{DoxyParamCaption})}
+
+
+
+save an image in the current session 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_a57dbc0abd360f44308ed05892d251ede}\label{class_image_editor_a57dbc0abd360f44308ed05892d251ede}} 
+\index{ImageEditor@{ImageEditor}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily void Image\+Editor\+::save\+As (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{image,  }\item[{\mbox{\hyperlink{classmy_string}{my\+String}}}]{filename }\end{DoxyParamCaption})}
+
+
+
+save image with new name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_editor_aca15b7b9089f438d8ac4c44f6021a19b}\label{class_image_editor_aca15b7b9089f438d8ac4c44f6021a19b}} 
+\index{ImageEditor@{ImageEditor}!switchSession@{switchSession}}
+\index{switchSession@{switchSession}!ImageEditor@{ImageEditor}}
+\doxysubsubsection{\texorpdfstring{switchSession()}{switchSession()}}
+{\footnotesize\ttfamily void Image\+Editor\+::switch\+Session (\begin{DoxyParamCaption}\item[{int}]{session\+Id }\end{DoxyParamCaption})}
+
+
+
+switch to another session 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Image\+Editor.\+h\item 
+Image\+Editor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\hypertarget{class_image}{}\doxysection{Image Class Reference}
+\label{class_image}\index{Image@{Image}}
+
+
+Abstract image container.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+Inheritance diagram for Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_image}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_a74bcae2ce8951ebd3d48a684cf54b531}\label{class_image_a74bcae2ce8951ebd3d48a684cf54b531}} 
+enum {\bfseries Direction} \{ {\bfseries horizontal}
+, {\bfseries vertical}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_a9700f58efb58b13e23666f19c67d3839}{Image}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_image}{Image}}\+:\+: \mbox{\hyperlink{class_image}{Image}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_a34410a36b132ab597a8878d45facc89a}{Image}} (const \mbox{\hyperlink{class_image}{Image}} \&image)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_image}{Image}}\+:\+: \mbox{\hyperlink{class_image}{Image}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\label{class_image_a0294f63700543e11c0f0da85601c7ae5}} 
+virtual {\bfseries $\sim$\+Image} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_image}{Image}}\+:\+: \mbox{\hyperlink{class_image}{Image}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_string}{my\+String}} \mbox{\hyperlink{class_image_a618183734579eecbb660febff4a9a8b9}{get\+Name}} () const
+\item 
+\mbox{\hyperlink{class_image}{Image}} \& \mbox{\hyperlink{class_image_adba4d519e12c4956fb857d0c44d45f8c}{operator=}} (const \mbox{\hyperlink{class_image}{Image}} \&)
+\item 
+virtual void \mbox{\hyperlink{class_image_a530adb4cea35209a6e8180815faf8ec8}{save}} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em save the iamge \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_image}{Image}} $\ast$ \mbox{\hyperlink{class_image_a82bc073125f72d9a98d85b59af8c0ec7}{create\+Copy}} ()=0
+\item 
+\mbox{\Hypertarget{class_image_af6d40be234c94a5d3d562c8475aedd6f}\label{class_image_af6d40be234c94a5d3d562c8475aedd6f}} 
+virtual void {\bfseries grayscale} ()=0
+\item 
+\mbox{\Hypertarget{class_image_a5c123189b0ed2d31e8a80e05696a8412}\label{class_image_a5c123189b0ed2d31e8a80e05696a8412}} 
+virtual void {\bfseries monochrome} ()=0
+\item 
+\mbox{\Hypertarget{class_image_aff53edc2799e9be84ebe3c565c4f0697}\label{class_image_aff53edc2799e9be84ebe3c565c4f0697}} 
+virtual void {\bfseries negative} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_image_a3df76d6b02d8fba995e14f53aea4a7f9}{rotate}} (int)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_ae4adf93c15f63d98bec938fb9e015544}\label{class_image_ae4adf93c15f63d98bec938fb9e015544}} 
+\mbox{\hyperlink{classmy_string}{my\+String}} {\bfseries filename}
+\item 
+\mbox{\Hypertarget{class_image_ae67312482be4c12021201978bd709c58}\label{class_image_ae67312482be4c12021201978bd709c58}} 
+char $\ast$ {\bfseries data}
+\item 
+\mbox{\Hypertarget{class_image_a9e140dd836532c8abfd160248cf68368}\label{class_image_a9e140dd836532c8abfd160248cf68368}} 
+int {\bfseries data\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract image container. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_a9700f58efb58b13e23666f19c67d3839}\label{class_image_a9700f58efb58b13e23666f19c67d3839}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_image}{Image}}\+:\+: \mbox{\hyperlink{class_image}{Image}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & image to load \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_a34410a36b132ab597a8878d45facc89a}\label{class_image_a34410a36b132ab597a8878d45facc89a}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_image}{Image}}\+:\+: \mbox{\hyperlink{class_image}{Image}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_a82bc073125f72d9a98d85b59af8c0ec7}\label{class_image_a82bc073125f72d9a98d85b59af8c0ec7}} 
+\index{Image@{Image}!createCopy@{createCopy}}
+\index{createCopy@{createCopy}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{createCopy()}{createCopy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_image}{Image}} $\ast$ Image\+::create\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_image_p_p_m_ad4993d7ceadfb85fc020e0f80c7bbeac}{Image\+PPM}}.
+
+\mbox{\Hypertarget{class_image_a618183734579eecbb660febff4a9a8b9}\label{class_image_a618183734579eecbb660febff4a9a8b9}} 
+\index{Image@{Image}!getName@{getName}}
+\index{getName@{getName}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_string}{my\+String}} Image\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmy_string}{my\+String}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_image_adba4d519e12c4956fb857d0c44d45f8c}\label{class_image_adba4d519e12c4956fb857d0c44d45f8c}} 
+\index{Image@{Image}!operator=@{operator=}}
+\index{operator=@{operator=}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_image}{Image}} \& Image\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} \&}]{image }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_image}{Image}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_image_a3df76d6b02d8fba995e14f53aea4a7f9}\label{class_image_a3df76d6b02d8fba995e14f53aea4a7f9}} 
+\index{Image@{Image}!rotate@{rotate}}
+\index{rotate@{rotate}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily virtual void Image\+::rotate (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_image_p_p_m_a0efa80eac78d8015d3ff2b14c54ea20f}{Image\+PPM}}.
+
+\mbox{\Hypertarget{class_image_a530adb4cea35209a6e8180815faf8ec8}\label{class_image_a530adb4cea35209a6e8180815faf8ec8}} 
+\index{Image@{Image}!save@{save}}
+\index{save@{save}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Image\+::save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+save the iamge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_image_p_b_m_a76fb12e1caa6123fb8b39215444c1de9}{Image\+PBM}}, \mbox{\hyperlink{class_image_p_g_m_ae704425afb3e267493788f9a547d2f19}{Image\+PGM}}, and \mbox{\hyperlink{class_image_p_p_m_ab4f41e54a48cd3d9f464c09a1259ca30}{Image\+PPM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Image.\+h\item 
+Image.\+cpp\end{DoxyCompactItemize}

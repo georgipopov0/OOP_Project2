@@ -1,6 +1,10 @@
 #pragma once
 #include "myString.h"
 
+/**
+ * @brief Abstract image container
+ * 
+ */
 class Image
 {
 private:
